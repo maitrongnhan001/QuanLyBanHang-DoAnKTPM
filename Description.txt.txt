@@ -1,0 +1,3 @@
+Khôi phục dữ liệu bằng file script_QLBH
+sau đó mở QuanLyBanHang rồi config cho phù hợp
+Cuối cùng ->> run
