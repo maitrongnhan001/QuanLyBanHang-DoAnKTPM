@@ -20,7 +20,7 @@ namespace QuanLyBanHang
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             if (this.txtUser.Text == "teonv" && this.txtPass.Text == "123")
-                this.Close();
+                this.Hide();
             else
             {
                 MessageBox.Show("Không đúng tên người dùng ? mật khẩu!!!", "Thông báo");
