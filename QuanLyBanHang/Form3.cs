@@ -50,7 +50,7 @@ namespace QuanLyBanHang
                         break;
                     case 4:
                         lblDM.Text = "Danh mục Sản phẩm";
-                        daTable = new SqlDataAdapter("select MaSP, TenSP, DonViTinh, DonGia from SANPHAM", conn);
+                        daTable = new SqlDataAdapter("select MaSP, TenSP, DonViTinh, DonGia, Hinh from SANPHAM", conn);
                         break;
                     case 5:
                         lblDM.Text = "Danh mục Hóa đơn";
