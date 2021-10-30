@@ -20,6 +20,8 @@ namespace QuanLyBanHang
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             if (this.txtUser.Text == "teonv" && this.txtPass.Text == "123")
+                //nếu dùng lệnh thoát form thì sẽ dân để thoát chương trình, do tác dụng của hàm closed
+                //vỉ vậy trong tường hợp này nên dùng lệnh ẩn form đăng nhập đi (Hide)
                 this.Hide();
             else
             {
