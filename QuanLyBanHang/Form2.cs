@@ -36,6 +36,8 @@ namespace QuanLyBanHang
                 Application.Exit();
         }
 
+
+
         private void Form2_Load(object sender, EventArgs e)
         {
 
@@ -44,6 +46,13 @@ namespace QuanLyBanHang
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //fix chức năng tắc form đăng nhâp
+            //khi tắc form đăng nhập thì tắc luôn form 1
+            Application.Exit();
         }
     }
 }
