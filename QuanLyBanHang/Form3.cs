@@ -42,7 +42,7 @@ namespace QuanLyBanHang
                         break;
                     case 2:
                         lblDM.Text = "Danh mục Khách hàng";
-                        daTable = new SqlDataAdapter("select MaKH, TenCTy from KHACHHANG", conn);
+                        daTable = new SqlDataAdapter("select MaKH, TenCTy, DiaChi, ThanhPho, DienThoai from KHACHHANG", conn);
                         break;
                     case 3:
                         lblDM.Text = "Danh mục Nhân viên";
