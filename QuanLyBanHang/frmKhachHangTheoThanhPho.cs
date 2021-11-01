@@ -68,8 +68,15 @@ namespace QuanLyBanHang
                 dtKhachHang = new DataTable();
                 dtKhachHang.Clear();
                 daKhachHang.Fill(dtKhachHang);
+
                 //Đưa dữ liệu lên DataGridView
                 this.dgvKhachHang.DataSource = dtKhachHang;
+
+                //  Đưa dữ liệu lên ComboBox trong DataGridView   
+                (dgvKhachHang.Columns["ThanhPho"] as DataGridViewComboBoxColumn).DataSource = dtThanhPho;
+                (dgvKhachHang.Columns["ThanhPho"] as DataGridViewComboBoxColumn).DisplayMember = "TenThanhPho";
+                (dgvKhachHang.Columns["ThanhPho"] as DataGridViewComboBoxColumn).ValueMember = "ThanhPho";
+
                 //Thay đổi độ rộng cột
                 dgvKhachHang.AutoResizeColumns();
 

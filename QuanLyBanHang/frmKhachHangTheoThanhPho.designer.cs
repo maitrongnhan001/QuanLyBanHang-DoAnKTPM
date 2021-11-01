@@ -36,15 +36,21 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cbThanhPho = new System.Windows.Forms.ComboBox();
+            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenCty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhPho = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.pnlThongTinKH.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(653, 269);
+            this.btnThoat.Location = new System.Drawing.Point(871, 331);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(100, 28);
             this.btnThoat.TabIndex = 0;
             this.btnThoat.Text = "Trở về";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -53,24 +59,34 @@
             // dgvKhachHang
             // 
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKhachHang.Location = new System.Drawing.Point(12, 44);
+            this.dgvKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaKH,
+            this.TenCty,
+            this.DiaChi,
+            this.ThanhPho,
+            this.DienThoai});
+            this.dgvKhachHang.Location = new System.Drawing.Point(16, 54);
+            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvKhachHang.Name = "dgvKhachHang";
-            this.dgvKhachHang.Size = new System.Drawing.Size(716, 203);
+            this.dgvKhachHang.RowHeadersWidth = 51;
+            this.dgvKhachHang.Size = new System.Drawing.Size(955, 250);
             this.dgvKhachHang.TabIndex = 1;
             // 
             // txtTongSoKH
             // 
-            this.txtTongSoKH.Location = new System.Drawing.Point(616, 0);
+            this.txtTongSoKH.Location = new System.Drawing.Point(821, 0);
+            this.txtTongSoKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTongSoKH.Name = "txtTongSoKH";
-            this.txtTongSoKH.Size = new System.Drawing.Size(83, 20);
+            this.txtTongSoKH.Size = new System.Drawing.Size(109, 22);
             this.txtTongSoKH.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(533, 4);
+            this.label5.Location = new System.Drawing.Point(711, 5);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.Size = new System.Drawing.Size(87, 17);
             this.label5.TabIndex = 13;
             this.label5.Text = "Tổng số KH:";
             // 
@@ -81,16 +97,18 @@
             this.pnlThongTinKH.Controls.Add(this.label5);
             this.pnlThongTinKH.Controls.Add(this.cbThanhPho);
             this.pnlThongTinKH.Controls.Add(this.txtTongSoKH);
-            this.pnlThongTinKH.Location = new System.Drawing.Point(12, 12);
+            this.pnlThongTinKH.Location = new System.Drawing.Point(16, 15);
+            this.pnlThongTinKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlThongTinKH.Name = "pnlThongTinKH";
-            this.pnlThongTinKH.Size = new System.Drawing.Size(716, 26);
+            this.pnlThongTinKH.Size = new System.Drawing.Size(955, 32);
             this.pnlThongTinKH.TabIndex = 14;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(220, 0);
+            this.btnOK.Location = new System.Drawing.Point(293, 0);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(53, 23);
+            this.btnOK.Size = new System.Drawing.Size(71, 28);
             this.btnOK.TabIndex = 19;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -99,28 +117,71 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 4);
+            this.label4.Location = new System.Drawing.Point(27, 5);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 13);
+            this.label4.Size = new System.Drawing.Size(119, 17);
             this.label4.TabIndex = 18;
             this.label4.Text = "Chọn Thành Phố:";
             // 
             // cbThanhPho
             // 
             this.cbThanhPho.FormattingEnabled = true;
-            this.cbThanhPho.Location = new System.Drawing.Point(121, 1);
+            this.cbThanhPho.Location = new System.Drawing.Point(161, 1);
+            this.cbThanhPho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbThanhPho.Name = "cbThanhPho";
-            this.cbThanhPho.Size = new System.Drawing.Size(83, 21);
+            this.cbThanhPho.Size = new System.Drawing.Size(109, 24);
             this.cbThanhPho.TabIndex = 17;
+            // 
+            // MaKH
+            // 
+            this.MaKH.DataPropertyName = "MaKH";
+            this.MaKH.HeaderText = "Mã KH";
+            this.MaKH.MinimumWidth = 6;
+            this.MaKH.Name = "MaKH";
+            this.MaKH.Width = 125;
+            // 
+            // TenCty
+            // 
+            this.TenCty.DataPropertyName = "TenCty";
+            this.TenCty.HeaderText = "Tên Cty";
+            this.TenCty.MinimumWidth = 6;
+            this.TenCty.Name = "TenCty";
+            this.TenCty.Width = 125;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.MinimumWidth = 6;
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.Width = 125;
+            // 
+            // ThanhPho
+            // 
+            this.ThanhPho.DataPropertyName = "ThanhPho";
+            this.ThanhPho.HeaderText = "Thành Phố";
+            this.ThanhPho.MinimumWidth = 6;
+            this.ThanhPho.Name = "ThanhPho";
+            this.ThanhPho.Width = 125;
+            // 
+            // DienThoai
+            // 
+            this.DienThoai.DataPropertyName = "DienThoai";
+            this.DienThoai.HeaderText = "Điện Thoại";
+            this.DienThoai.MinimumWidth = 6;
+            this.DienThoai.Name = "DienThoai";
+            this.DienThoai.Width = 125;
             // 
             // frmKhachHangTheoThanhPho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 302);
+            this.ClientSize = new System.Drawing.Size(995, 372);
             this.Controls.Add(this.pnlThongTinKH);
             this.Controls.Add(this.dgvKhachHang);
             this.Controls.Add(this.btnThoat);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmKhachHangTheoThanhPho";
             this.Text = "Quản lý  Khách hàng theo Thành phố";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmKhachHangTheoThanhPho_FormClosing);
@@ -142,5 +203,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbThanhPho;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenCty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewComboBoxColumn ThanhPho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
     }
 }
