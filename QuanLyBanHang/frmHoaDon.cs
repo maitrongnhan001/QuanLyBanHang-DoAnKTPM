@@ -65,13 +65,28 @@ namespace QuanLyBanHang
                 dtKhachHang.Clear();
                 daKhachHang.Fill(dtKhachHang);
 
-                //Vận chuyển dữ liệu lên DataTable dtNhanVien dùng cho combobox
-                daNhanVien = new SqlDataAdapter("SELECT * FROM NhanVien", conn);
+                //Vận chuyển dữ liệu lên DataTable dtHoaDon
+                daNhanVien = new SqlDataAdapter("SELECT MaNV, (Ho + ' ' + Ten) AS HoTen FROM NhanVien", conn);
                 dtNhanVien = new DataTable();
                 dtNhanVien.Clear();
                 daNhanVien.Fill(dtNhanVien);
-                
-               //Xóa các đối tượng trong Panel
+
+                //Đưa dữ liệu lên ComboBox
+                this.cbMaKH.DataSource = dtKhachHang;
+                this.cbMaKH.DisplayMember = "TenCty";
+                this.cbMaKH.ValueMember = "MaKH";
+
+                //  Đưa dữ liệu lên ComboBox trong DataGridView   
+                (dgvHoaDon.Columns["MaKH"] as DataGridViewComboBoxColumn).DataSource = dtKhachHang;
+                (dgvHoaDon.Columns["MaKH"] as DataGridViewComboBoxColumn).DisplayMember = "TenCty";
+                (dgvHoaDon.Columns["MaKH"] as DataGridViewComboBoxColumn).ValueMember = "MaKH";
+
+                //  Đưa dữ liệu lên ComboBox trong DataGridView   
+                (dgvHoaDon.Columns["MaNV"] as DataGridViewComboBoxColumn).DataSource = dtNhanVien;
+                (dgvHoaDon.Columns["MaNV"] as DataGridViewComboBoxColumn).DisplayMember = "HoTen";
+                (dgvHoaDon.Columns["MaNV"] as DataGridViewComboBoxColumn).ValueMember = "MaNV";
+
+                //Xóa các đối tượng trong Panel
                 this.txtMaHD.ResetText();
                 this.txtNgayLapHD.ResetText();
                 this.txtNgayNhanHang.ResetText();
