@@ -271,7 +271,7 @@ namespace QuanLyBanHang
                     cmd.CommandText = System.String.Concat("Update HoaDon Set MaHD='"+
                         this.txtMaHD.Text.ToString() + "', MaKH ='" + 
                         this.cbMaKH.SelectedValue.ToString() + "', MaNV ='" + this.cbMaNV.SelectedValue.ToString() 
-                        + "', NgayLapHD ='" + this.txtNgayLapHD.Text.ToString() + "', MaKH ='" + this.txtNgayNhanHang.Text.ToString() + 
+                        + "', NgayLapHD ='" + this.txtNgayLapHD.Text.ToString() + "', NgayNhanHang ='" + this.txtNgayNhanHang.Text.ToString() + 
                         "' where MaHD ='" + strMAHD + "'");
                     //Cập nhật
                     cmd.CommandType = CommandType.Text;
